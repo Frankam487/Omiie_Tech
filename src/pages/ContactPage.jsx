@@ -1,43 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
+import { useForm } from "react-hook-form";
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  const [formError, setFormError] = useState(null);
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const onSubmit = (data) => {
+    // Construire l'URL mailto avec les données du formulaire
+    const mailtoLink = `mailto:tonemail@example.com?subject=${encodeURIComponent(
+      data.subject
+    )}&body=${encodeURIComponent(
+      `Nom: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
+    )}`;
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Simple validation
-    if (
-      !formData.name ||
-      !formData.email ||
-      !formData.subject ||
-      !formData.message
-    ) {
-      setFormError("Tous les champs sont obligatoires.");
-      return;
-    }
-
-    setFormError(null);
-    setFormSubmitted(true);
-
-    // Here you could handle the form submission, for example, by sending the data to an API.
-    console.log("Form data submitted:", formData);
+    // Rediriger vers la boîte mail
+    window.location.href = mailtoLink;
   };
 
   return (
@@ -47,102 +27,125 @@ const ContactPage = () => {
           Contactez-nous
         </h2>
 
-        {formSubmitted ? (
-          <div className="text-center text-green-600">
-            <h3 className="text-xl">Merci de nous avoir contactés !</h3>
-            <p>
-              Nous avons bien reçu votre message et nous vous répondrons dans
-              les plus brefs délais.
-            </p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {formError && (
-              <p className="text-red-500 text-center">{formError}</p>
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          {/* Nom */}
+          <div>
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Nom <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="name"
+              {...register("name", {
+                required: "Le nom est obligatoire.",
+                minLength: {
+                  value: 2,
+                  message: "Le nom doit contenir au moins 2 caractères.",
+                },
+              })}
+              className={`mt-1 block w-full px-3 py-2 border ${
+                errors.name ? "border-red-500" : "border-gray-300"
+              } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
+            />
+            {errors.name && (
+              <p className="text-red-500 text-sm">{errors.name.message}</p>
             )}
+          </div>
 
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Nom
-              </label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                required
-              />
-            </div>
+          {/* Email */}
+          <div>
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Email <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              {...register("email", {
+                required: "L'email est obligatoire.",
+                pattern: {
+                  value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                  message: "Veuillez entrer une adresse email valide.",
+                },
+              })}
+              className={`mt-1 block w-full px-3 py-2 border ${
+                errors.email ? "border-red-500" : "border-gray-300"
+              } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
+            />
+            {errors.email && (
+              <p className="text-red-500 text-sm">{errors.email.message}</p>
+            )}
+          </div>
 
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                required
-              />
-            </div>
+          {/* Sujet */}
+          <div>
+            <label
+              htmlFor="subject"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Sujet <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="subject"
+              {...register("subject", {
+                required: "Le sujet est obligatoire.",
+                minLength: {
+                  value: 5,
+                  message: "Le sujet doit contenir au moins 5 caractères.",
+                },
+              })}
+              className={`mt-1 block w-full px-3 py-2 border ${
+                errors.subject ? "border-red-500" : "border-gray-300"
+              } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
+            />
+            {errors.subject && (
+              <p className="text-red-500 text-sm">{errors.subject.message}</p>
+            )}
+          </div>
 
-            <div>
-              <label
-                htmlFor="subject"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Sujet
-              </label>
-              <input
-                type="text"
-                name="subject"
-                id="subject"
-                value={formData.subject}
-                onChange={handleInputChange}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                required
-              />
-            </div>
+          {/* Message */}
+          <div>
+            <label
+              htmlFor="message"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Message <span className="text-red-500">*</span>
+            </label>
+            <textarea
+              id="message"
+              rows="4"
+              {...register("message", {
+                required: "Le message est obligatoire.",
+                minLength: {
+                  value: 10,
+                  message: "Le message doit contenir au moins 10 caractères.",
+                },
+              })}
+              className={`mt-1 block w-full px-3 py-2 border ${
+                errors.message ? "border-red-500" : "border-gray-300"
+              } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
+            />
+            {errors.message && (
+              <p className="text-red-500 text-sm">{errors.message.message}</p>
+            )}
+          </div>
 
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Message
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                value={formData.message}
-                onChange={handleInputChange}
-                rows="4"
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                required
-              />
-            </div>
-
-            <div>
-              <button
-                type="submit"
-                className="w-full py-2 px-4 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              >
-                Envoyer le message
-              </button>
-            </div>
-          </form>
-        )}
+          {/* Bouton de soumission */}
+          <div>
+            <button
+              type="submit"
+              className="w-full py-2 px-4 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            >
+              Envoyer le message
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
