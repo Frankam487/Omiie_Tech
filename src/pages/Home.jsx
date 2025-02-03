@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
-
+import { NavLink } from "react-router-dom";
 function Home() {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
@@ -30,13 +30,11 @@ function Home() {
             <motion.NavLink
               to="/services"
               whileHover={{ scale: 1.05 }}
-              className="mt-6 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-purple-700 transition"
+              className="mt-6 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md"
             >
               Découvrir nos services
             </motion.NavLink>
           </motion.section>
-
-          {/* Section Services */}
           <motion.section
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
