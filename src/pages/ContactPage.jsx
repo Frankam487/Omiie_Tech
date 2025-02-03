@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
-// 🔥 Définition du schéma de validation Yup
 const validationSchema = yup.object().shape({
   name: yup
     .string()
@@ -31,12 +30,12 @@ const ContactPage = () => {
     formState: { errors, isValid },
   } = useForm({
     resolver: yupResolver(validationSchema),
-    mode: "onChange", // Permet une validation en temps réel
+    mode: "onChange",
   });
 
   const onSubmit = (data) => {
     // Construire l'URL mailto avec les données du formulaire
-    const mailtoLink = `mailto:tonemail@example.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:fokamdjoko8@gmail.com=${encodeURIComponent(
       data.subject
     )}&body=${encodeURIComponent(
       `Nom: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
