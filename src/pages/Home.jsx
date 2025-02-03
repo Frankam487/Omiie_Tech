@@ -27,13 +27,13 @@ function Home() {
               </span>
               , réseaux et création digitale.
             </p>
-            <motion.a
-              href="#services"
+            <motion.NavLink
+              to="/services"
               whileHover={{ scale: 1.05 }}
               className="mt-6 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-purple-700 transition"
             >
               Découvrir nos services
-            </motion.a>
+            </motion.NavLink>
           </motion.section>
 
           {/* Section Services */}
@@ -51,8 +51,6 @@ function Home() {
               entreprise pour une transformation digitale réussie.
             </p>
           </motion.section>
-
-          {/* Galerie d'images */}
           <Gallery />
         </main>
 
