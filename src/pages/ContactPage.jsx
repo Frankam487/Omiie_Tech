@@ -1,12 +1,38 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+// 🔥 Définition du schéma de validation Yup
+const validationSchema = yup.object().shape({
+  name: yup
+    .string()
+    .matches(/^[A-Za-zÀ-ÿ -]+$/, "Le nom ne doit contenir que des lettres.")
+    .min(2, "Le nom doit contenir au moins 2 caractères.")
+    .required("Le nom est obligatoire."),
+  email: yup
+    .string()
+    .email("Veuillez entrer une adresse email valide.")
+    .required("L'email est obligatoire."),
+  subject: yup
+    .string()
+    .min(5, "Le sujet doit contenir au moins 5 caractères.")
+    .required("Le sujet est obligatoire."),
+  message: yup
+    .string()
+    .min(20, "Le message doit contenir au moins 20 caractères.")
+    .required("Le message est obligatoire."),
+});
 
 const ContactPage = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
-  } = useForm();
+    formState: { errors, isValid },
+  } = useForm({
+    resolver: yupResolver(validationSchema),
+    mode: "onChange", // Permet une validation en temps réel
+  });
 
   const onSubmit = (data) => {
     // Construire l'URL mailto avec les données du formulaire
@@ -39,13 +65,7 @@ const ContactPage = () => {
             <input
               type="text"
               id="name"
-              {...register("name", {
-                required: "Le nom est obligatoire.",
-                minLength: {
-                  value: 2,
-                  message: "Le nom doit contenir au moins 2 caractères.",
-                },
-              })}
+              {...register("name")}
               className={`mt-1 block w-full px-3 py-2 border ${
                 errors.name ? "border-red-500" : "border-gray-300"
               } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
@@ -66,13 +86,7 @@ const ContactPage = () => {
             <input
               type="email"
               id="email"
-              {...register("email", {
-                required: "L'email est obligatoire.",
-                pattern: {
-                  value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                  message: "Veuillez entrer une adresse email valide.",
-                },
-              })}
+              {...register("email")}
               className={`mt-1 block w-full px-3 py-2 border ${
                 errors.email ? "border-red-500" : "border-gray-300"
               } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
@@ -93,13 +107,7 @@ const ContactPage = () => {
             <input
               type="text"
               id="subject"
-              {...register("subject", {
-                required: "Le sujet est obligatoire.",
-                minLength: {
-                  value: 5,
-                  message: "Le sujet doit contenir au moins 5 caractères.",
-                },
-              })}
+              {...register("subject")}
               className={`mt-1 block w-full px-3 py-2 border ${
                 errors.subject ? "border-red-500" : "border-gray-300"
               } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
@@ -120,13 +128,7 @@ const ContactPage = () => {
             <textarea
               id="message"
               rows="4"
-              {...register("message", {
-                required: "Le message est obligatoire.",
-                minLength: {
-                  value: 10,
-                  message: "Le message doit contenir au moins 10 caractères.",
-                },
-              })}
+              {...register("message")}
               className={`mt-1 block w-full px-3 py-2 border ${
                 errors.message ? "border-red-500" : "border-gray-300"
               } rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
@@ -140,7 +142,12 @@ const ContactPage = () => {
           <div>
             <button
               type="submit"
-              className="w-full py-2 px-4 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              className={`w-full py-2 px-4 font-semibold rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 ${
+                isValid
+                  ? "bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-indigo-500"
+                  : "bg-gray-400 text-gray-200 cursor-not-allowed"
+              }`}
+              disabled={!isValid} // Empêche l'envoi si le formulaire est invalide
             >
               Envoyer le message
             </button>
