@@ -2,36 +2,57 @@ import React from "react";
 import Header from "../components/Header";
 import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
+import { motion } from "framer-motion";
 
 function Home() {
   return (
-    <div className="relative min-h-screen bg-gray-100">
-      {/* Effet de flou pour l'arrière-plan */}
-      <div className="absolute inset-0 bg-gray-900 opacity-30 blur-md"></div>
-
+    <div className="relative min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
       <div className="relative z-10">
         <Header />
-        <main className="px-4 py-8 max-w-7xl mx-auto">
-          <section id="hero" className="text-center mb-12">
-            <h2 className="text-4xl font-semibold text-gray-800 mb-4">
-              Bienvenue chez Omiie
-            </h2>
-            <p className="text-xl text-gray-600">
-              Votre partenaire en sécurité informatique, réseaux et création
-              digitale.
+        <main className="px-6 py-12 mt-60 max-w-6xl mx-auto">
+          <motion.section
+            id="hero"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h1 className="text-5xl md:text-7xl  font-extrabold text-gray-900 font-sans mb-12">
+              Bienvenue chez <span className="text-purple-600">Omiie</span>
+            </h1>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              Votre partenaire en{" "}
+              <span className="font-semibold text-purple-700">
+                sécurité informatique
+              </span>
+              , réseaux et création digitale.
             </p>
-          </section>
+            <motion.a
+              href="#services"
+              whileHover={{ scale: 1.05 }}
+              className="mt-6 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-purple-700 transition"
+            >
+              Découvrir nos services
+            </motion.a>
+          </motion.section>
 
-          <section className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800">
-              L'avenir avec Omiie
+          {/* Section Services */}
+          <motion.section
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              🚀 L'avenir avec Omiie
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               Nous offrons des solutions informatiques adaptées à votre
-              entreprise.
+              entreprise pour une transformation digitale réussie.
             </p>
-          </section>
+          </motion.section>
 
+          {/* Galerie d'images */}
           <Gallery />
         </main>
 

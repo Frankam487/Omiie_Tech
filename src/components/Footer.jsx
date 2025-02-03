@@ -6,7 +6,7 @@ const Footer = () => {
       <section id="about" className="mb-6">
         <h2 className="text-2xl font-semibold mb-4">À Propos de Nous</h2>
         <p className="text-lg">
-          Créée en 2017 par M. Noubou Nathan, Omiie (Organisation des Milieu et
+          Créée en 2017 par M. Noubou Nathan, Omiie (Organisation des Milieux et
           Interface Informatique pour Entreprise) s'engage à offrir des
           solutions innovantes et adaptées aux besoins des entreprises. Notre
           expertise repose sur des années d'expérience dans le domaine de
@@ -26,7 +26,7 @@ const Footer = () => {
           LinkedIn
         </a>
       </div>
-      <p className="mt-4">&copy; 2024 Omiie</p>
+      <p className="mt-4">&copy; 2025 Omiie</p>
     </footer>
   );
 };
