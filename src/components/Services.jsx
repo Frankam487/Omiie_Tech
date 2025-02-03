@@ -35,9 +35,9 @@ const services = [
 ];
 
 const carouselImages = [
-  "/images/project1.jpg",
-  "/images/project2.jpg",
-  "/images/project3.jpg",
+  "../assets/react.svg",
+  "../assets/react.svg",
+  "../assets/react.svg",
 ];
 
 const Services = () => {
