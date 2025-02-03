@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const services = [
   {
@@ -33,18 +34,37 @@ const services = [
   },
 ];
 
+const carouselImages = [
+  "/images/project1.jpg",
+  "/images/project2.jpg",
+  "/images/project3.jpg",
+];
+
 const Services = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const handleNextImage = () => {
+    setCurrentImage((prevIndex) => (prevIndex + 1) % carouselImages.length);
+  };
+
+  const handlePrevImage = () => {
+    setCurrentImage(
+      (prevIndex) =>
+        (prevIndex - 1 + carouselImages.length) % carouselImages.length
+    );
+  };
+
   return (
     <section id="services" className="py-16 bg-gray-50">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
           Nos Services
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105"
+              className="bg-white rounded-lg shadow-xl p-6 transition-transform transform hover:scale-105"
             >
               <div className="text-5xl text-blue-600 mb-4 text-center">
                 {service.icon}
@@ -56,15 +76,41 @@ const Services = () => {
                 {service.description}
               </p>
               <div className="text-center">
-                <a
-                  href="#"
-                  className="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition"
+                <NavLink
+                  to="/contact"
+                  className="bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700 transition"
                 >
-                  En savoir plus
-                </a>
+                  Contactez-nous
+                </NavLink>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Carrousel */}
+        <div className="relative mb-12">
+          <h3 className="text-3xl font-semibold text-center text-gray-800 mb-6">
+            Découvrez Nos Projets
+          </h3>
+          <div className="flex justify-center items-center relative">
+            <button
+              onClick={handlePrevImage}
+              className="absolute left-0 text-white bg-blue-600 rounded-full p-2 m-2 hover:bg-blue-700"
+            >
+              &#8592;
+            </button>
+            <img
+              src={carouselImages[currentImage]}
+              alt="Projet"
+              className="w-4/5 max-w-3xl rounded-lg shadow-lg"
+            />
+            <button
+              onClick={handleNextImage}
+              className="absolute right-0 text-white bg-blue-600 rounded-full p-2 m-2 hover:bg-blue-700"
+            >
+              &#8594;
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -72,4 +118,3 @@ const Services = () => {
 };
 
 export default Services;
-// Compare this snippet from src/pages/Services.jsx:
