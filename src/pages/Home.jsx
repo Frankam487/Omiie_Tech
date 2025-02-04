@@ -27,13 +27,20 @@ function Home() {
               </span>
               , réseaux et création digitale.
             </p>
-            <motion.NavLink
-              to="/services"
-              // whileHover={{ scale: 1 }}
+            <motion.a
+              href="/services"
+              whileHover={{ scale: 1 }}
               className="mt-6 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md"
             >
               Découvrir nos services
-            </motion.NavLink>
+            </motion.a>
+            {/* <motion.NavLink
+              to="/services"
+              whileHover={{ scale: 1 }}
+              className="mt-6 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md"
+            >
+              Découvrir nos services
+            </motion.NavLink> */}
           </motion.section>
           <motion.section
             initial={{ opacity: 0, y: 50 }}
