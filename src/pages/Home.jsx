@@ -28,7 +28,7 @@ function Home() {
               , réseaux et création digitale.
             </p>
             <motion.a
-              href="../pages/Services"
+              href="../Services"
               whileHover={{ scale: 1 }}
               className="mt-6 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md"
             >
