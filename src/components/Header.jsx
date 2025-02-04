@@ -57,7 +57,7 @@ const Header = () => {
         </button>
       </nav>
 
-      {/* Menu déroulant Mobile */}
+      
       <div
         className={`md:hidden absolute top-16 left-0 w-full bg-blue-700 text-white shadow-lg py-4 px-6 transform transition ${
           menuOpen
