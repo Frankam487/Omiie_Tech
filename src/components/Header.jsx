@@ -10,7 +10,11 @@ const Header = () => {
         {/* Logo */}
         <div className="text-2xl font-bold">
           <NavLink to="/" className="hover:text-gray-200 transition">
-            <img src="../../public/owl-4556597.jpg" className="" alt="" />
+            <img
+              src="../../public/owl-4556597.jpg"
+              className="w-16 h-16 rounded-full object-cover border border-gray-300 shadow-md"
+              alt=""
+            />
           </NavLink>
         </div>
 
@@ -56,7 +60,6 @@ const Header = () => {
           </div>
         </button>
       </nav>
-
 
       <div
         className={`md:hidden absolute top-16 left-0 w-full bg-blue-700 text-white shadow-lg py-4 px-6 transform transition ${

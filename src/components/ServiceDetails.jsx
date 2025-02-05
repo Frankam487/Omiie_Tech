@@ -104,7 +104,6 @@ const ServiceDetail = () => {
           </div>
         </div>
 
-        {/* Bouton Contact */}
         <div className="mt-8 flex justify-center">
           <NavLink
             to="/contact"

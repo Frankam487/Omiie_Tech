@@ -3,19 +3,21 @@ import Home from "./pages/Home";
 import ContactPage from "./pages/ContactPage";
 import Services from "./components/Services";
 import ServiceDetails from "./components/ServiceDetails";
+import Header from "./components/Header";
 
 const App = () => {
   return (
-    <BrowserRouter>
-
+    <>
+      <BrowserRouter>
+    <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/services/:id" element={<ServiceDetails />} />
         </Routes>
-
-    </BrowserRouter>
+      </BrowserRouter>
+    </>
   );
 };
 
