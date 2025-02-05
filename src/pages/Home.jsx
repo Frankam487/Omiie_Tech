@@ -1,5 +1,3 @@
-import React from "react";
-import Header from "../components/Header";
 import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
@@ -8,7 +6,7 @@ function Home() {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
       <div className="relative z-10">
-      
+
         <main className="px-6 py-12 mt-60 max-w-6xl mx-auto">
           <motion.section
             id="hero"

@@ -10,7 +10,7 @@ const services = [
     icon: "🖥️",
     details:
       "Notre équipe développe des applications sur mesure adaptées aux besoins de votre entreprise, en optimisant la performance, la sécurité et l'expérience utilisateur.",
-    image: "../../public/dev-web.jpg",
+    image: "./dev-web.jpg",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const services = [
     icon: "🔐",
     details:
       "Nous analysons les vulnérabilités, mettons en place des pare-feux et formons vos équipes aux meilleures pratiques de sécurité numérique.",
-    image: "../../public/security-265130.jpg",
+    image: "./security-265130.jpg",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const services = [
     icon: "⚙️",
     details:
       "Nous proposons des solutions de maintenance préventive et curative pour minimiser les interruptions et améliorer la productivité.",
-    image: "../../public/technology-785742.jpg",
+    image: "./technology-785742.jpg",
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const services = [
     icon: "🌐",
     details:
       "Nos experts installent et optimisent vos infrastructures réseau pour assurer une connexion rapide et fiable.",
-    image: "/images/network.jpg",
+    image: "/network.jpg",
   },
   {
     id: 5,
@@ -50,7 +50,7 @@ const services = [
     icon: "☁️",
     details:
       "Nous offrons des services cloud performants pour la sauvegarde, l'hébergement et la gestion de données à distance.",
-    image: "../../public/cloud.jpg",
+    image: "./cloud.jpg",
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const services = [
     icon: "☁️",
     details:
       "Nous offrons des services de vente du materiel informatique de tout genre.",
-    image: "/images/cloud.jpg",
+    image: "/cloud.jpg",
   },
 ];
 
