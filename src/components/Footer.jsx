@@ -10,29 +10,14 @@ const Footer = () => {
           <div>
             <h2 className="text-2xl font-bold text-gray-200 mb-4">À Propos</h2>
             <p className="text-gray-400 leading-relaxed">
-              Fondée en 2017 par M. Noubou Nathan, Omiie offre des solutions
+              Fondée en 2017 par M. Noubou Nathan, Omiie (Organisation des Milieux et
+          Interface Informatique pour Entreprise) offre des solutions
               innovantes pour les entreprises dans le domaine de la technologie.
             </p>
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-gray-200 mb-4">Liens Rapides</h2>
-            <ul className="space-y-2">
-              <li>
-                <a href="#services" className="text-gray-400 hover:text-white transition">
-                  Nos Services
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-gray-400 hover:text-white transition">
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a href="#team" className="text-gray-400 hover:text-white transition">
-                  Notre Équipe
-                </a>
-              </li>
-            </ul>
+            
+            
           </div>
           <div>
             <h2 className="text-2xl font-bold text-gray-200 mb-4">Suivez-nous</h2>
