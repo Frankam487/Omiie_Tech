@@ -62,6 +62,16 @@ const services = [
       "Nous offrons des services de vente du materiel informatique de tout genre.",
     image: "/cloud.jpg",
   },
+  {
+    id: 7,
+    title: "Web Design",
+    description:
+      "Obtenez un design web moderne et élégant pour mettre en valeur votre marque et vos produits.",
+    icon: "☁️",
+    details:
+      "Nous offrons des services de formation en web-design tout genre.",
+    image: "/cloud.jpg",
+  },
 ];
 
 const ServiceDetail = () => {
