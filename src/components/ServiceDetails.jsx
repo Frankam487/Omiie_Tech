@@ -10,7 +10,7 @@ const services = [
     icon: "🖥️",
     details:
       "Notre équipe développe des applications sur mesure adaptées aux besoins de votre entreprise, en optimisant la performance, la sécurité et l'expérience utilisateur.",
-    image: "/images/web-dev.jpg",
+    image: "../../public/dev-web.jpg",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const services = [
     icon: "🔐",
     details:
       "Nous analysons les vulnérabilités, mettons en place des pare-feux et formons vos équipes aux meilleures pratiques de sécurité numérique.",
-    image: "/images/cybersecurity.jpg",
+    image: "../../public/security-265130.jpg",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const services = [
     icon: "⚙️",
     details:
       "Nous proposons des solutions de maintenance préventive et curative pour minimiser les interruptions et améliorer la productivité.",
-    image: "/images/support.jpg",
+    image: "../../public/technology-785742.jpg",
   },
   {
     id: 4,
@@ -93,7 +93,7 @@ const ServiceDetail = () => {
             className="w-full lg:w-1/2 rounded-lg shadow-md"
           />
 
-         
+
           <div className="text-center lg:text-left">
             <div className="text-6xl">{service.icon}</div>
             <h2 className="text-4xl font-bold text-gray-900 my-4">

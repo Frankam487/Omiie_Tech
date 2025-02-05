@@ -10,7 +10,7 @@ const Header = () => {
         {/* Logo */}
         <div className="text-2xl font-bold">
           <NavLink to="/" className="hover:text-gray-200 transition">
-            Omiie
+            <img src="../../public/owl-4556597.jpg" className="" alt="" />
           </NavLink>
         </div>
 
@@ -57,7 +57,7 @@ const Header = () => {
         </button>
       </nav>
 
-      
+
       <div
         className={`md:hidden absolute top-16 left-0 w-full bg-blue-700 text-white shadow-lg py-4 px-6 transform transition ${
           menuOpen
