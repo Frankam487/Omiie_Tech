@@ -1,7 +1,6 @@
-import Gallery from "../components/Gallery";
-import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
+import Gallery from "../components/Gallery";
 function Home() {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
@@ -49,8 +48,6 @@ function Home() {
           </motion.section>
           <Gallery />
         </main>
-
-        <Footer />
       </div>
     </div>
   );
