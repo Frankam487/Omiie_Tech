@@ -1,5 +1,6 @@
 import { useParams, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
+import WebDev from "./WebDev";
 
 const services = [
   {
@@ -88,7 +89,6 @@ const ServiceDetail = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 px-6 py-12">
-
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -96,14 +96,11 @@ const ServiceDetail = () => {
         className="max-w-5xl bg-white p-8 rounded-lg shadow-lg"
       >
         <div className="flex flex-col lg:flex-row items-center gap-8">
-
           <img
             src={service.image}
             alt={service.title}
             className="w-full lg:w-1/2 rounded-lg shadow-md"
           />
-
-
           <div className="text-center lg:text-left">
             <div className="text-6xl">{service.icon}</div>
             <h2 className="text-4xl font-bold text-gray-900 my-4">
@@ -121,8 +118,10 @@ const ServiceDetail = () => {
           >
             Contactez-nous
           </NavLink>
+          
         </div>
       </motion.div>
+      <WebDev/>
     </div>
   );
 };
