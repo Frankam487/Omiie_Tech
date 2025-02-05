@@ -50,7 +50,7 @@ const services = [
     icon: "☁️",
     details:
       "Nous offrons des services cloud performants pour la sauvegarde, l'hébergement et la gestion de données à distance.",
-    image: "/images/cloud.jpg",
+    image: "../../public/cloud.jpg",
   },
   {
     id: 6,
