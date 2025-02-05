@@ -1,7 +1,7 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
-const Whatsapp = () => {
+const WhatsappBtn = () => {
   const phoneNumber = "+237672809736";
   const message = "Salut, j'ai une question !";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
@@ -21,4 +21,4 @@ const Whatsapp = () => {
   );
 };
 
-export default Whatsapp;
+export default WhatsappBtn;

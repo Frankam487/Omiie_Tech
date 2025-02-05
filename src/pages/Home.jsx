@@ -15,7 +15,7 @@ function Home() {
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-7xl  font-extrabold text-gray-900 font-sans mb-12">
-              Bienvenue chez <span className="text-purple-600">Omiie</span>
+              <span className="welcome">Bienvenue chez</span> <span className="text-purple-600">Omiie</span>
             </h1>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
               Votre partenaire en{" "}
@@ -47,6 +47,7 @@ function Home() {
             </p>
           </motion.section>
           <Gallery />
+          
         </main>
       </div>
     </div>
