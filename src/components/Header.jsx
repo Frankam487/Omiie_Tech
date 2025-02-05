@@ -11,7 +11,7 @@ const Header = () => {
         <div className="text-2xl font-bold">
           <NavLink to="/" className="hover:text-gray-200 transition">
             <img
-              src="/owl-4556597.jpg"
+              src="/owl.jpg"
               className="w-16 h-16 rounded-full object-cover border border-gray-300 shadow-md"
               alt=""
             />

@@ -10,7 +10,7 @@ const services = [
     icon: "🖥️",
     details:
       "Notre équipe développe des applications sur mesure adaptées aux besoins de votre entreprise, en optimisant la performance, la sécurité et l'expérience utilisateur.",
-    image: "./dev-web.jpg",
+    image: "/dev-web.jpg",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const services = [
     icon: "🔐",
     details:
       "Nous analysons les vulnérabilités, mettons en place des pare-feux et formons vos équipes aux meilleures pratiques de sécurité numérique.",
-    image: "./security-265130.jpg",
+    image: "/security-265130.jpg",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const services = [
     icon: "⚙️",
     details:
       "Nous proposons des solutions de maintenance préventive et curative pour minimiser les interruptions et améliorer la productivité.",
-    image: "./technology-785742.jpg",
+    image: "/technology-785742.jpg",
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ const services = [
     icon: "☁️",
     details:
       "Nous offrons des services cloud performants pour la sauvegarde, l'hébergement et la gestion de données à distance.",
-    image: "./cloud.jpg",
+    image: "/cloud.jpg",
   },
   {
     id: 6,
