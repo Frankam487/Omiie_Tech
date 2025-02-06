@@ -33,7 +33,7 @@ const ContactForm = () => {
       setIsSubmitting(false);
       setIsSent(true);
 
-      const mailto = `mailto:fkamgang06@gmail.com?subject=${encodeURIComponent(
+      const mailto = `mailto:fokamdjoko8@gmail.com?subject=${encodeURIComponent(
         data.subject
       )}&body=${encodeURIComponent(
         `Nom: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
