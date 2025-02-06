@@ -54,7 +54,7 @@ const Footer = () => {
           &copy; 2025 Omiie - Tous droits réservés.
         </div>
         <h4 className="text-center  mt-2">
-        <span translate="no">By <strong className="text-slate-600 ">FrankamDev@gmail.com</strong></span>
+          <span translate="no">By <strong className="text-slate-600 "><a href={ `mailto:frankamDev@gmail.com`}  className="underline font-bold">FrankamDev@gmail.com</a></strong></span>
       </h4>
       </div>
       
