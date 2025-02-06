@@ -50,7 +50,7 @@ const ContactForm = () => {
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg"
+      className="my-10  max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg"
     >
       <h2 className="text-3xl font-bold text-center text-indigo-600 mb-6">
         Contactez-nous
@@ -67,9 +67,9 @@ const ContactForm = () => {
         </motion.div>
       )}
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+      <form  onSubmit={handleSubmit(onSubmit)} className=" space-y-6 ">
         {/* Nom */}
-        <div>
+        <div className="">
           <label className="text-sm font-medium text-gray-700 flex items-center">
             <FaUser className="mr-2 text-indigo-500" />
             Nom
