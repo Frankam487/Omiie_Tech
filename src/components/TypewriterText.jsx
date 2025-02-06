@@ -1,32 +1,16 @@
-import { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
 
-const colors = ["text-red-500", "text-blue-500", "text-green-500", "text-purple-500"];
-
 const TypewriterText = () => {
-  const [colorIndex, setColorIndex] = useState(0);
-
-  useEffect(() => {
-    const changeColor = () => {
-      setColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
-    };
-    
-    const interval = setInterval(changeColor, 4000);
-
-    return () => clearInterval(interval); // Nettoyage de l'intervalle à la destruction du composant
-  }, []);
-
   return (
-    <div className="flex justify-center items-center min-h-[200px]">
+    <div className="flex justify-center">
       <div className="text-center">
-        <h1
-          className={`text-2xl md:text-6xl mb-4 transition-colors duration-500 ${colors[colorIndex]}`}
-          aria-live="polite" // Pour améliorer l'accessibilité
-        >
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          <span className="text-cyan-800">OMMIE</span>
+          <br />
           <Typewriter
             options={{
               strings: [
-                "Salut tout le monde...",
+                "Bienvenue chez nous",
                 "Des solutions innovantes",
                 "Transformons vos idées en réalité",
               ],
@@ -37,7 +21,7 @@ const TypewriterText = () => {
             }}
           />
         </h1>
-        <p className="text-lg text-gray-400 font-bold font-serif">Votre succès commence ici.</p>
+        <p className="text-lg text-gray-400">Votre succès commence ici.</p>
       </div>
     </div>
   );
