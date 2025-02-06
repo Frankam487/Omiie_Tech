@@ -269,7 +269,7 @@ const servicesData = [
     "Design visuel professionnel et créatif",
     "Adaptabilité à tous les supports (web & print)",
   ],
-  image: "/images/infographie.jpg",
+  image: "/infographie.jpg",
 },
 {
   id: 8,
@@ -288,7 +288,7 @@ const servicesData = [
     "Documents professionnels et bien organisés",
     "Meilleure gestion des tâches administratives",
   ],
-  image: "/images/bureautique.jpg",
+  image: "/bureautique.jpg",
 },
 
 ];
