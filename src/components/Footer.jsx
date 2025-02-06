@@ -54,6 +54,9 @@ const Footer = () => {
           &copy; 2025 Omiie - Tous droits réservés.
         </div>
       </div>
+      <h3>
+        <span>By <strong className="text-slate-600">FrankamDev</strong></span>
+      </h3>
     </footer>
   );
 };
