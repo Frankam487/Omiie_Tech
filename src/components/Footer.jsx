@@ -6,8 +6,7 @@ const Footer = () => {
     <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-          {/* À Propos */}
-          <div>
+           <div>
             <h2 className="text-2xl font-bold text-gray-200 mb-4">À Propos</h2>
             <p className="text-gray-400 leading-relaxed">
               Fondée en 2017 par M. Noubou Nathan, Omiie (Organisation des Milieux et
@@ -23,7 +22,7 @@ const Footer = () => {
             <h2 className="text-2xl font-bold text-gray-200 mb-4">Suivez-nous</h2>
             <div className="flex justify-center md:justify-start space-x-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/Frankam.Shopping"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-gray-800 hover:bg-blue-600 transition transform hover:scale-110"
