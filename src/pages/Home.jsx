@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import Gallery from "../components/Gallery";
+import TypewriterText from "../components/TypewriterText";
 function Home() {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
       <div className="relative z-10">
 
-        <main className="px-6 py-12 mt-60 max-w-6xl mx-auto">
+        <main className="px-6  mt-28 max-w-6xl mx-auto">
           <motion.section
             id="hero"
             initial={{ opacity: 0, y: -50 }}
@@ -14,10 +15,12 @@ function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
+            
             <h1 className="text-5xl md:text-7xl  font-extrabold text-gray-900 font-sans mb-12">
               <span className="welcome">Bienvenue chez</span> <span className="text-purple-600">Omiie</span>
             </h1>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              <TypewriterText/>
               Votre partenaire en{" "}
               <span className="font-semibold text-purple-700">
                 sécurité informatique

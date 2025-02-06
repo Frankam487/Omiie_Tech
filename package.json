@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
+    "business": "file:",
     "framer-motion": "^12.0.11",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -18,6 +19,7 @@
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.1.1",
     "sass": "^1.83.4",
+    "typewriter-effect": "^2.21.0",
     "yup": "^1.6.1"
   },
   "devDependencies": {
