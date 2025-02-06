@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { NavLink } from "react-router-dom";
 
 const services = [
@@ -58,7 +58,7 @@ const Services = () => {
               </p>
               <div className="text-center">
                 <NavLink
-                  to={`/services/${service.id}`}
+                  to={`/pp/${service.id}`}
                   className="bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700 transition"
                 >
                   Voir plus

@@ -1,129 +1,114 @@
-import { useParams, NavLink } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import WebDev from "./WebDev";
 
-const services = [
+const pp = [
   {
     id: 1,
     title: "Développement Web",
-    description:
-      "Nous créons des sites web modernes et responsives avec les dernières technologies comme React, Next.js et Tailwind CSS.",
-    icon: "🖥️",
-    details:
-      "Notre équipe développe des applications sur mesure adaptées aux besoins de votre entreprise, en optimisant la performance, la sécurité et l'expérience utilisateur.",
-    image: "/dev-web.jpg",
+    description: "Nous créons des sites web performants et modernes adaptés à vos besoins.",
+    services: [
+      "Création de sites vitrines et e-commerce",
+      "Applications web sur mesure",
+      "Maintenance et support technique",
+    ],
+    image: "/images/dev-web.jpg",
   },
   {
     id: 2,
     title: "Sécurité Informatique",
-    description:
-      "Nous mettons en place des solutions de cybersécurité avancées pour protéger vos systèmes contre les attaques.",
-    icon: "🔐",
-    details:
-      "Nous analysons les vulnérabilités, mettons en place des pare-feux et formons vos équipes aux meilleures pratiques de sécurité numérique.",
-    image: "/security-265130.jpg",
+    description: "Protégez vos données avec nos solutions de cybersécurité avancées.",
+    services: [
+      "Audit et test de sécurité",
+      "Protection contre les cyberattaques",
+      "Formation en cybersécurité",
+    ],
+    image: "/images/securite.jpg",
   },
   {
     id: 3,
-    title: "Support et Maintenance",
-    description:
-      "Assistance technique et maintenance proactive pour assurer la stabilité et la performance de vos infrastructures.",
-    icon: "⚙️",
-    details:
-      "Nous proposons des solutions de maintenance préventive et curative pour minimiser les interruptions et améliorer la productivité.",
-    image: "/technology-785742.jpg",
+    title: "Web Design",
+    description: "Nous concevons des interfaces modernes et intuitives pour une expérience utilisateur optimale.",
+    services: [
+      "UX/UI Design",
+      "Branding et identité visuelle",
+      "Prototypage et wireframing",
+    ],
+    image: "/images/web-design.jpg",
   },
   {
     id: 4,
-    title: "Création de Réseaux",
-    description:
-      "Nous concevons des architectures réseau robustes et sécurisées adaptées à vos besoins professionnels.",
-    icon: "🌐",
-    details:
-      "Nos experts installent et optimisent vos infrastructures réseau pour assurer une connexion rapide et fiable.",
-    image: "/network.jpg",
+    title: "Vente de Matériel Informatique",
+    description: "Trouvez le meilleur matériel informatique pour vos besoins professionnels.",
+    services: [
+      "Ordinateurs et accessoires",
+      "Composants informatiques",
+      "Solutions d'impression",
+    ],
+    image: "/design.jpg",
   },
   {
     id: 5,
-    title: "Cloud Computing",
-    description:
-      "Optimisez la gestion de vos données avec nos solutions cloud évolutives et sécurisées.",
-    icon: "☁️",
-    details:
-      "Nous offrons des services cloud performants pour la sauvegarde, l'hébergement et la gestion de données à distance.",
-    image: "/cloud.jpg",
-  },
-  {
-    id: 6,
-    title: "Vente du materiel informatique",
-    description:
-      "Optimisez la gestion de vos données avec nos solutions cloud évolutives et sécurisées.",
-    icon: "☁️",
-    details:
-      "Nous offrons des services de vente du materiel informatique de tout genre.",
-    image: "/cloud.jpg",
-  },
-  {
-    id: 7,
-    title: "Web Design",
-    description:
-      "Obtenez un design web moderne et élégant pour mettre en valeur votre marque et vos produits.",
-    icon: "☁️",
-    details:
-      "Nous offrons des services de formation en web-design tout genre.",
-    image: "/cloud.jpg",
+    title: "Impression & Photocopie",
+    description: "Impression haute qualité pour vos documents professionnels et personnels.",
+    services: [
+      "Impression couleur et noir & blanc",
+      "Reliure et plastification",
+      "Impression grand format",
+    ],
+    image: "/images/impression.jpg",
   },
 ];
 
-const ServiceDetail = () => {
+const ServiceDetails = () => {
   const { id } = useParams();
-  const service = services.find((s) => s.id === parseInt(id));
-
-  if (!service) {
+  const pageData = pp.find((item) => item.id === parseInt(id));
+  if (!pageData) {
     return (
-      <h2 className="text-center text-red-500 mt-12 text-2xl">
-        Service non trouvé
-      </h2>
+      <div className="flex items-center justify-center min-h-screen">
+        <h2 className="text-2xl font-bold text-red-500">Page non trouvée</h2>
+      </div>
     );
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 px-6 py-12">
+    <div className="min-h-screen bg-gray-100 py-12 px-6">
       <motion.div
-        initial={{ opacity: 0, y: -50 }}
+        className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg"
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="max-w-5xl bg-white p-8 rounded-lg shadow-lg"
+        transition={{ duration: 0.6 }}
       >
-        <div className="flex flex-col lg:flex-row items-center gap-8">
-          <img
-            src={service.image}
-            alt={service.title}
-            className="w-full lg:w-1/2 rounded-lg shadow-md"
-          />
-          <div className="text-center lg:text-left">
-            <div className="text-6xl">{service.icon}</div>
-            <h2 className="text-4xl font-bold text-gray-900 my-4">
-              {service.title}
-            </h2>
-            <p className="text-lg text-gray-700">{service.description}</p>
-            <p className="mt-4 text-gray-600">{service.details}</p>
-          </div>
-        </div>
+        <h2 className="text-3xl font-bold text-gray-900">{pageData.title}</h2>
+        <p className="text-lg text-gray-700 mt-4">{pageData.description}</p>
 
-        <div className="mt-8 flex justify-center">
-          <NavLink
-            to="/contact"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-blue-700 transition"
-          >
-            Contactez-nous
-          </NavLink>
-          
+        <ul className="mt-6 space-y-3 text-gray-700">
+          {pageData.services.map((service, index) => (
+            <motion.li
+              key={index}
+              className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg shadow-md"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+            >
+              <span className="text-blue-600 text-xl font-bold">✓</span>
+              {service}
+            </motion.li>
+          ))}
+        </ul>
+
+        <div className="mt-6">
+          <motion.img
+            src={pageData.image}
+            alt={pageData.title}
+            className="w-full h-60 object-cover rounded-lg shadow-md"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+          />
         </div>
       </motion.div>
-      <WebDev/>
     </div>
   );
 };
 
-export default ServiceDetail;
+export default ServiceDetails;
