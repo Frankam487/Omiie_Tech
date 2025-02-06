@@ -9,14 +9,14 @@ const TypewriterText = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
-    }, 4000); // Change de couleur après chaque phrase
+    }, 4000); 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="flex justify-center items-center min-h-[200px]">
       <div className="text-center">
-        <h1 className={`text-4xl md:text-6xl font-bold mb-4 transition-colors duration-500 ${colors[colorIndex]}`}>
+        <h1 className={`text-2xl md:text-6xl mb-4  transition-colors duration-500 ${colors[colorIndex]}`}>
           <Typewriter
             options={{
               strings: [
@@ -31,7 +31,7 @@ const TypewriterText = () => {
             }}
           />
         </h1>
-        <p className="text-lg text-gray-500">Votre succès commence ici.</p>
+        <p className="text-lg text-gray-400 font-bold font-serif">Votre succès commence ici.</p>
       </div>
     </div>
   );
