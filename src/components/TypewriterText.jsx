@@ -5,8 +5,6 @@ const TypewriterText = () => {
     <div className="flex justify-center">
       <div className="text-center">
         <h4 className="md:text-6xl mb-4 text-4xl text-red">
-          
-          
           <Typewriter
             options={{
               strings: [
