@@ -190,7 +190,7 @@ const servicesData = [
     "Maintenance rapide et efficace",
     "Conseils personnalisés pour vos besoins",
   ],
-  image: "/technology.jpg",
+  image: "/computer.png",
 },
 
 {
@@ -230,7 +230,7 @@ const servicesData = [
     "Sécurité renforcée contre les intrusions",
     "Optimisation des flux de données",
   ],
-  image: "/reseau.jpg",
+  image: "/reseau.png",
 },
 
 {
@@ -288,7 +288,7 @@ const servicesData = [
     "Documents professionnels et bien organisés",
     "Meilleure gestion des tâches administratives",
   ],
-  image: "/bureautique.jpg",
+  image: "/bureatique.png",
 },
 
 ];
@@ -365,7 +365,7 @@ const ServiceDetails = () => {
           <motion.img
             src={service.image}
             alt={service.title}
-            className="w-full h-80 object-cover rounded-lg shadow-md"
+            className="w-full  object-cover rounded-lg shadow-md"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
