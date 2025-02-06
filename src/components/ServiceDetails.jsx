@@ -334,7 +334,7 @@ const ServiceDetails = () => {
         </ul>
 
         <h3 className="text-2xl font-semibold mt-6">Technologies et Outils</h3>
-        <div className="flex gap-3 mt-4">
+        <div className="flex gap-3 mt-4 flex flex-wrap">
           {service.tools.map((tool, index) => (
             <span
               key={index}
