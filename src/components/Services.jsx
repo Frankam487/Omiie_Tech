@@ -32,6 +32,24 @@ const services = [
     description: "Optimisation du stockage et accessibilité.",
     icon: "☁️",
   },
+  {
+    id: 6,
+    title: "Web Design",
+    description: "Realisation des flyers et maquettes.",
+    icon: "🏢",
+  },
+  {
+    id: 7,
+    title: "infographie",
+    description: "Création d'illustrations et de visuels percutants pour vos projets.",
+    icon: "🎞",
+  },
+  {
+    id: 8,
+    title: "Bureautique",
+    description: "Optimisez votre productivité avec nos formations et solutions bureautiques.",
+    icon: "🖨",
+  },
 ];
 
 const Services = () => {

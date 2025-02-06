@@ -252,6 +252,44 @@ const servicesData = [
   ],
   image: "/cloud.jpg",
 },
+{
+  id: 7,
+  title: "Infographie",
+  description: "Création d'illustrations et de visuels percutants pour vos projets.",
+  details: "Nos infographistes réalisent des visuels professionnels et personnalisés adaptés à tous vos besoins en communication.",
+  services: [
+    "Illustrations et dessins vectoriels",
+    "Infographies explicatives et schémas",
+    "Retouche et montage photo",
+    "Maquettage et mise en page",
+  ],
+  tools: ["Adobe Illustrator", "Photoshop", "InDesign", "Figma", "CorelDRAW"],
+  benefits: [
+    "Communication claire et impactante",
+    "Design visuel professionnel et créatif",
+    "Adaptabilité à tous les supports (web & print)",
+  ],
+  image: "/images/infographie.jpg",
+},
+{
+  id: 8,
+  title: "Bureautique",
+  description: "Optimisez votre productivité avec nos formations et solutions bureautiques.",
+  details: "Nous proposons des formations complètes en bureautique ainsi que des solutions adaptées pour faciliter la gestion administrative et documentaire.",
+  services: [
+    "Formation aux logiciels bureautiques (Word, Excel, PowerPoint, Outlook)",
+    "Gestion et automatisation des documents",
+    "Saisie et mise en page professionnelle",
+    "Numérisation et archivage électronique",
+  ],
+  tools: ["Microsoft Office", "Google Workspace", "LibreOffice", "Adobe Acrobat"],
+  benefits: [
+    "Gain de temps et d'efficacité",
+    "Documents professionnels et bien organisés",
+    "Meilleure gestion des tâches administratives",
+  ],
+  image: "/images/bureautique.jpg",
+},
 
 ];
 

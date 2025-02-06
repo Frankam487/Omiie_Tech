@@ -49,14 +49,15 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
+        
         <div className="mt-10 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
           &copy; 2025 Omiie - Tous droits réservés.
         </div>
-      </div>
-      <h2 className="text-center text-xl mt-8">
+        <h4 className="text-center  mt-2">
         <span>By <strong className="text-slate-600 ">FrankamDev@gmail.com</strong></span>
-      </h2>
+      </h4>
+      </div>
+      
     </footer>
   );
 };
