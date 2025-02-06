@@ -73,7 +73,7 @@ const Header = () => {
             <li key={index}>
               <NavLink
                 to={item === "Accueil" ? "/" : `/${item.toLowerCase()}`}
-                className="block py-2 text-lg font-medium hover:text-gray-300 transition"
+                className="block py-2 bg-slate-200 rounded-lg text-center text-lg font-medium hover:text-gray-300 transition"
                 onClick={() => setMenuOpen(false)}
               >
                 {item}
