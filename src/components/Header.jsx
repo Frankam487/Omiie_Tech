@@ -38,10 +38,10 @@ const Header = () => {
 
         {/* Bouton Menu Mobile */}
         <button
-          className="md:hidden focus:outline-none"
+          className="md:hidden z-10 focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <div className="w-7 h-7 flex flex-col justify-between">
+          <div className="w-7  h-7 flex flex-col justify-between">
             <span
               className={`block w-7 h-1 bg-white transition ${
                 menuOpen ? "rotate-45 translate-y-2" : ""
@@ -62,7 +62,7 @@ const Header = () => {
       </nav>
 
       <div
-        className={`md:hidden absolute top-16 left-0 w-full bg-blue-700 text-white shadow-lg py-4 px-6 transform transition ${
+        className={`md:hidden absolute top-16 left-0 w-full bg-blue-700 z-10 mt-6 bg-transparent text-cyan-700 shadow-lg py-4 px-6 transform transition ${
           menuOpen
             ? "translate-y-0 opacity-100"
             : "-translate-y-10 opacity-0 pointer-events-none"
