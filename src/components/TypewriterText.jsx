@@ -1,10 +1,22 @@
+import { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
 
+const colors = ["text-red-500", "text-blue-500", "text-green-500", "text-purple-500"];
+
 const TypewriterText = () => {
+  const [colorIndex, setColorIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
+    }, 4000); // Change de couleur après chaque phrase
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center items-center min-h-[200px]">
       <div className="text-center">
-        <h4 className="md:text-6xl mb-4 text-4xl py-8 text-red">
+        <h1 className={`text-4xl md:text-6xl font-bold mb-4 transition-colors duration-500 ${colors[colorIndex]}`}>
           <Typewriter
             options={{
               strings: [
@@ -18,8 +30,8 @@ const TypewriterText = () => {
               deleteSpeed: 50,
             }}
           />
-        </h4>
-        <p className="text-lg text-gray-400">Votre succès commence ici.</p>
+        </h1>
+        <p className="text-lg text-gray-500">Votre succès commence ici.</p>
       </div>
     </div>
   );
