@@ -1,6 +1,6 @@
 const Gallery = () => {
   const images = ["computer.jpg", "search.jpg", "cloud.jpg", "dev-web.jpg",
-    "laptop.jpg", 'laptop.jpg', "ram.jpg", "search.jpg"];
+    "laptop.jpg",  "ram.jpg", "search.jpg"];
 
   return (
     <section className="photo-gallery py-12">
