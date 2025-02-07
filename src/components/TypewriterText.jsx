@@ -1,51 +1,21 @@
-// import Typed from "react-typed";
-
-// const TypewriterText = () => {
-//   return (
-//     <div className="flex justify-center flex-wrap min-h-[200px] items-center">
-//       <div className="text-center">
-//         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">
-//           <Typed
-//             strings={[
-//               "Bienvenue chez nous",
-//               "Des solutions innovantes",
-//               "Transformons vos idées en réalité",
-//             ]}
-//             typeSpeed={75}
-//             backSpeed={50}
-//             backDelay={1000}
-//             startDelay={500}
-//             loop
-//           />
-//         </h1>
-//         <p className="text-lg text-gray-400">Votre succès commence ici.</p>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default TypewriterText;
-
-import Typewriter from "typewriter-effect";
+import Typed from "react-typed";
 
 const TypewriterText = () => {
   return (
-    <div className="flex justify-center flex-wrap min-h-[200px] items-center">
-      <div className="text-center">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4" aria-live="polite">
-          <Typewriter
-            options={{
-              strings: [
-                "Bienvenue chez nous",
-                "Des solutions innovantes",
-                "Transformons vos idées en réalité",
-              ],
-              autoStart: true,
-              loop: true,
-              delay: 75,
-              deleteSpeed: 50,
-              skipAddStyles: true, // Empêche les bugs liés aux styles
-            }}
+    <div className="flex justify-center items-center min-h-[200px] text-center px-4">
+      <div>
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 whitespace-nowrap overflow-visible">
+          <Typed
+            strings={[
+              "Bienvenue chez nous",
+              "Des solutions innovantes",
+              "Transformons vos idées en réalité",
+            ]}
+            typeSpeed={50} // Ralentir pour éviter les glitchs
+            backSpeed={30}
+            backDelay={1500} // Pause plus longue avant d’effacer
+            startDelay={700}
+            loop
           />
         </h1>
         <p className="text-lg text-gray-400">Votre succès commence ici.</p>
