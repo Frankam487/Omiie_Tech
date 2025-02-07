@@ -53,7 +53,7 @@ function Home() {
             <NavLink
               to='/services'
               whileHover={{ scale: 1 }}
-              className="mt-6 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg text-lg font-semibold mb-5"
+              className="mt-6 inline-block bg-purple-600 text-white px-6 py-3 rounded-lg text-lg font-semibold mb-5 shadow-lg"
             >
               Services
             </NavLink>
