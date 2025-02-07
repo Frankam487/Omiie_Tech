@@ -62,7 +62,7 @@ const Header = () => {
       </nav>
 
       <div
-        className={`md:hidden absolute top-16 left-0 w-full bg-blue-700 z-10 mt-6 bg-transparent text-cyan-700 shadow-lg py-4 px-6 transform transition ${
+        className={`md:hidden absolute top-16 left-0 w-full bg-purple-700 z-10 mt-6 bg-transparent text-cyan-700 shadow-lg py-4 px-6 transform transition ${
           menuOpen
             ? "translate-y-0 opacity-100"
             : "-translate-y-10 opacity-0 pointer-events-none"
