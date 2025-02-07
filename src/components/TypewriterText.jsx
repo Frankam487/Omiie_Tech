@@ -5,7 +5,7 @@ const TypewriterText = () => {
     <div className="flex justify-center">
       <div className="text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          <span className="text-cyan-800">OMMIE</span>
+          
           <br />
           <Typewriter
             options={{
