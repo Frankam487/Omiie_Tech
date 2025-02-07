@@ -1,4 +1,4 @@
-import Typed from "react-typed";
+import { Typed } from "react-typed";
 
 const TypewriterText = () => {
   return (
@@ -11,9 +11,9 @@ const TypewriterText = () => {
               "Des solutions innovantes",
               "Transformons vos idées en réalité",
             ]}
-            typeSpeed={50} // Ralentir pour éviter les glitchs
+            typeSpeed={50} 
             backSpeed={30}
-            backDelay={1500} // Pause plus longue avant d’effacer
+            backDelay={1500} 
             startDelay={700}
             loop
           />
