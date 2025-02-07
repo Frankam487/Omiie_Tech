@@ -2,10 +2,9 @@ import Typewriter from "typewriter-effect";
 
 const TypewriterText = () => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center flex-wrap">
       <div className="text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          
           <br />
           <Typewriter
             options={{
