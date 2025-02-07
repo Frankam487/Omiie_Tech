@@ -4,7 +4,7 @@ const TypewriterText = () => {
   return (
     <div className="flex justify-center flex-wrap min-h-[200px] items-center">
       <div className="text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4" aria-live="polite">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4" aria-live="polite">
           <Typewriter
             options={{
               strings: [
@@ -16,6 +16,7 @@ const TypewriterText = () => {
               loop: true,
               delay: 75,
               deleteSpeed: 50,
+              skipAddStyles: true, 
             }}
           />
         </h1>
