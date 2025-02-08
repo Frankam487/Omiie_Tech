@@ -19,7 +19,7 @@ function Home() {
               <span className="welcome">Bienvenue chez</span> <span className="text-purple-600">Omiie</span>
             </h1>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              <TypewriterText/>
+              {/* <TypewriterText/> */}
               Votre partenaire en{" "}
               <span className="font-semibold text-purple-700">
                 sécurité informatique
