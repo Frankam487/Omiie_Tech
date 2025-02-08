@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import Gallery from "../components/Gallery";
-// import TypewriterText from "../components/TypewriterText";
+import TypewriterText from "../components/TypewriterText";
 function Home() {
   return (
     <div className="relative min-h-screen pt-10  bg-slate-500 bg-gradient-to-br from-gray-50 to-gray-200">
@@ -19,7 +19,7 @@ function Home() {
               <span className="welcome">Bienvenue chez</span> <span className="text-purple-600">Omiie</span>
             </h1>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              {/* <TypewriterText/> */}
+              <TypewriterText/>
               Votre partenaire en{" "}
               <span className="font-semibold text-purple-700">
                 sécurité informatique

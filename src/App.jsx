@@ -22,7 +22,7 @@ const App = () => {
           <Route path="/contact" element={<ContactPage />} />
           {/* <Route path="/pageData/:id" element={<ServiceDetails />} /> */}
           <Route path="/pp/:id" element={<ServiceDetails />} />
-          {/* <Route path="/services/:2" element={<WebDesign />} /> */}
+        
         </Routes>
         <WhatsappBtn/>
         <Footer />
