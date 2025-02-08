@@ -6,8 +6,12 @@ import ContactPage from "./pages/ContactPage";
 import Home from "./pages/Home";
 import WhatsappBtn from "./components/WhatsappBtn";
 import ServiceDetails from "./components/ServiceDetails";
+import { useEffect } from "react";
 
 const App = () => {
+  useEffect(() => {
+    document.documentElement.setAttribute("lang", "en");
+  }, []);
   return (
     <>
       <BrowserRouter>
