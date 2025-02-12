@@ -42,7 +42,7 @@ const Header = () => {
       )}
 
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-md bg-opacity-80 ${
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-lg bg-opacity-80 ${
           scrolled ? "bg-white/80 shadow-md text-gray-900" : "bg-transparent text-white"
         }`}
       >
@@ -92,7 +92,7 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.3 }}
-              className="fixed top-0 right-0 w-3/4 h-full bg-gradient-to-br from-blue-500 to-indigo-700 text-white shadow-xl py-6 px-8 flex flex-col z-50 rounded-l-2xl"
+              className="fixed top-0 right-0 w-full h-full bg-white/30 backdrop-blur-xl text-white shadow-xl py-6 px-8 flex flex-col z-50 rounded-l-2xl"
             >
               <button
                 className="self-end mb-6 text-white focus:outline-none"
@@ -101,12 +101,12 @@ const Header = () => {
               >
                 <FiX size={30} />
               </button>
-              <ul className="flex flex-col space-y-6">
+              <ul className="flex flex-col space-y-6 text-center text-xl">
                 {navItems.map(({ name, path }) => (
                   <li key={name}>
                     <NavLink
                       to={path}
-                      className="block py-2 text-lg font-medium hover:bg-blue-500 rounded-lg transition text-center"
+                      className="block py-3 px-6 bg-white/20 rounded-lg hover:bg-white/40 transition text-gray-900 font-semibold"
                       onClick={closeMenu}
                     >
                       {name}
