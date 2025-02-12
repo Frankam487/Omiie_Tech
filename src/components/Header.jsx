@@ -1,11 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { FiMenu, FiX } from "react-icons/fi";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
 
   const navItems = [
     { name: "Accueil", path: "/" },
@@ -14,7 +25,11 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-blue-600 text-white shadow-md sticky top-0 z-50">
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-white shadow-md text-gray-900" : "bg-transparent text-white"
+      }`}
+    >
       <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <NavLink to="/" className="text-2xl font-bold flex items-center">
@@ -32,8 +47,8 @@ const Header = () => {
               <NavLink
                 to={path}
                 className={({ isActive }) =>
-                  `relative transition hover:text-gray-200 ${
-                    isActive ? "border-b-2 border-white" : ""
+                  `relative transition hover:text-blue-500 ${
+                    isActive ? "border-b-2 border-blue-500" : ""
                   }`
                 }
               >
@@ -49,23 +64,7 @@ const Header = () => {
           onClick={toggleMenu}
           aria-label="Ouvrir le menu"
         >
-          <div className="w-7 h-7 flex flex-col justify-between">
-            <span
-              className={`block w-7 h-1 bg-white transition-transform duration-300 ${
-                menuOpen ? "rotate-45 translate-y-2" : ""
-              }`}
-            />
-            <span
-              className={`block w-7 h-1 bg-white transition-opacity duration-300 ${
-                menuOpen ? "opacity-0" : ""
-              }`}
-            />
-            <span
-              className={`block w-7 h-1 bg-white transition-transform duration-300 ${
-                menuOpen ? "-rotate-45 -translate-y-2" : ""
-              }`}
-            />
-          </div>
+          {menuOpen ? <FiX size={30} /> : <FiMenu size={30} />}
         </button>
       </nav>
 
@@ -73,19 +72,26 @@ const Header = () => {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -10, opacity: 0 }}
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
             transition={{ duration: 0.3 }}
-            className="md:hidden absolute top-16 left-0 w-full bg-blue-700 shadow-lg py-4 px-6"
+            className="fixed top-0 right-0 w-3/4 h-full bg-blue-600 text-white shadow-lg py-6 px-8 flex flex-col"
           >
-            <ul className="flex flex-col space-y-4">
+            <button
+              className="self-end mb-6 text-white focus:outline-none"
+              onClick={closeMenu}
+              aria-label="Fermer le menu"
+            >
+              <FiX size={30} />
+            </button>
+            <ul className="flex flex-col space-y-6">
               {navItems.map(({ name, path }) => (
                 <li key={name}>
                   <NavLink
                     to={path}
-                    className="block py-2 text-center text-lg font-medium hover:bg-blue-500 rounded-lg transition"
-                    onClick={toggleMenu}
+                    className="block py-2 text-lg font-medium hover:bg-blue-500 rounded-lg transition text-center"
+                    onClick={closeMenu}
                   >
                     {name}
                   </NavLink>
