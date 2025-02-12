@@ -42,7 +42,7 @@ const ContactForm = () => {
 
       reset();
       setTimeout(() => setIsSent(false), 5000);
-    }, 2000);
+    }, 3000);
   };
 
   return (
