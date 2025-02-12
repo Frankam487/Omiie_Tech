@@ -35,15 +35,15 @@ const Header = () => {
   return (
     <>
       {menuOpen && (
-       <div
-          className="fixed inset-0 bg-purple-900  bg-opacity-50 backdrop-blur-lg z-40"
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-lg z-40"
           onClick={closeMenu}
-        ></div> 
+        ></div>
       )}
 
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-lg bg-opacity-80 ${
-          scrolled ? "bg-white/80 shadow-2xl text-gray-900" : "bg-transparent "
+          scrolled ? "bg-white/80 shadow-md text-gray-900" : "bg-transparent text-white"
         }`}
       >
         <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -92,15 +92,8 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.3 }}
-              className="fixed top-0 right-0 w-full h-full bg-white/30 backdrop-blur-xl text-white shadow-xl py-6 px-8 flex flex-col z-50 rounded-l-2xl"
+              className="fixed top-20 right-0 w-4/5 h-[calc(100%-5rem)] bg-white/30 backdrop-blur-xl text-white shadow-xl py-6 px-8 flex flex-col z-50 rounded-l-2xl"
             >
-              <button
-                className="self-end mb-6 text-white focus:outline-none"
-                onClick={closeMenu}
-                aria-label="Fermer le menu"
-              >
-                <FiX size={30} />
-              </button>
               <ul className="flex flex-col space-y-6 text-center text-xl">
                 {navItems.map(({ name, path }) => (
                   <li key={name}>
