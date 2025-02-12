@@ -50,7 +50,7 @@ const ContactForm = () => {
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="my-10  max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg"
+      className="my-10 mt-12 max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg"
     >
       <h2 className="text-3xl font-bold text-center text-indigo-600 mb-6">
         Contactez-nous
