@@ -35,15 +35,15 @@ const Header = () => {
   return (
     <>
       {menuOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-lg z-40"
+       <div
+          className="fixed inset-0 bg-purple-900  bg-opacity-50 backdrop-blur-lg z-40"
           onClick={closeMenu}
-        ></div>
+        ></div> 
       )}
 
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-lg bg-opacity-80 ${
-          scrolled ? "bg-white/80 shadow-md text-gray-900" : "bg-transparent text-white"
+          scrolled ? "bg-white/80 shadow-2xl text-gray-900" : "bg-transparent "
         }`}
       >
         <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
