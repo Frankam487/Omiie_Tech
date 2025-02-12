@@ -92,7 +92,7 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.3 }}
-              className="fixed top-20 right-0 w-4/5 h-100% bg-white/30 backdrop-blur-xl text-white shadow-xl py-6 px-8 flex flex-col z-50 rounded-l-2xl"
+              className="fixed top-20 right-0 w-4/5 mt-8 h-100% bg-white/30 backdrop-blur-xl text-white shadow-xl py-6 px-8 flex flex-col z-50 rounded-l-2xl"
             >
               <ul className="flex flex-col space-y-6 text-center text-xl">
                 {navItems.map(({ name, path }) => (
