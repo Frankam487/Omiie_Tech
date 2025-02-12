@@ -43,7 +43,7 @@ const Header = () => {
 
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-lg bg-opacity-80 ${
-          scrolled ? "bg-white/80 shadow-md text-gray-900" : "bg-transparent text-white"
+          scrolled ? "bg-white/80 shadow-md text-gray-900" : "bg-transparent text-purple-900"
         }`}
       >
         <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -92,7 +92,7 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.3 }}
-              className="fixed top-20 right-0 w-4/5 h-[calc(100%-5rem)] bg-white/30 backdrop-blur-xl text-white shadow-xl py-6 px-8 flex flex-col z-50 rounded-l-2xl"
+              className="fixed top-20 right-0 w-4/5 h-100% bg-white/30 backdrop-blur-xl text-white shadow-xl py-6 px-8 flex flex-col z-50 rounded-l-2xl"
             >
               <ul className="flex flex-col space-y-6 text-center text-xl">
                 {navItems.map(({ name, path }) => (
