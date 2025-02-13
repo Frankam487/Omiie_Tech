@@ -56,7 +56,6 @@ const Header = () => {
             />
           </NavLink>
 
-          {/* Menu Desktop */}
           <ul className="hidden md:flex space-x-8 text-lg font-medium">
             {navItems.map(({ name, path }) => (
               <li key={name}>
