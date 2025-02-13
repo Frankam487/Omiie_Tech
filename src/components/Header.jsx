@@ -51,7 +51,7 @@ const Header = () => {
           <NavLink to="/" className="text-2xl font-bold flex items-center">
             <img
               src="/owl1.jpg"
-              className="w-14 h-14 rounded-full object-cover border border-gray-300 shadow-md"
+              className="w-14 h-14 rounded-full object-cover border  border-gray-300 shadow-ld"
               alt="Logo du site"
             />
           </NavLink>
