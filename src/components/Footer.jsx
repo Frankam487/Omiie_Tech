@@ -2,6 +2,9 @@
 import { FaFacebookF, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
+
+  const phoneNumber = "+237672809736";
+  const message = "Salut...!";
   return (
     <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
       <div className="container mx-auto px-6 md:px-12">
@@ -15,8 +18,6 @@ const Footer = () => {
             </p>
           </div>
           <div>
-            
-            
           </div>
           <div>
             <h2 className="text-2xl font-bold text-gray-200 mb-4">Suivez-nous</h2>
@@ -38,7 +39,9 @@ const Footer = () => {
                 <FaWhatsapp className="text-white text-lg" />
               </a>
               <a
-                href="https://linkedin.com"
+                href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message
+  )}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-gray-800 hover:bg-blue-700 transition transform hover:scale-110"

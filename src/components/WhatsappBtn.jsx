@@ -1,9 +1,8 @@
-import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
 const WhatsappBtn = () => {
   const phoneNumber = "+237672809736";
-  const message = "Salut, j'ai une question !";
+  const message = "Salut...!";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message
   )}`;
