@@ -50,7 +50,7 @@ const Header = () => {
           {/* Logo */}
           <NavLink to="/" className="text-2xl font-bold flex items-center">
             <img
-              src="/public/owl1.jpg"
+              src="/owl1.jpg"
               className="w-14 h-14 rounded-full object-cover border border-gray-300 shadow-md"
               alt="Logo du site"
             />
