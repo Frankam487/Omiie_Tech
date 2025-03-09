@@ -47,7 +47,7 @@ const Header = () => {
         }`}
       >
         <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          {/* Logo */}
+         
           <NavLink to="/" className="text-2xl md:-ml-5 font-bold flex items-center">
             <img
               src="/owl1.jpg"
