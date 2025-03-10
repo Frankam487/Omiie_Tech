@@ -10,6 +10,7 @@ import ServiceDetails from "./components/ServiceDetails";
 import { useEffect } from "react";
 
 const App = () => {
+ 
   useEffect(() => {
     document.documentElement.setAttribute("lang", "en");
   }, []);
@@ -22,7 +23,6 @@ const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/pp/:id" element={<ServiceDetails />} />
-        
         </Routes>
         <WhatsappBtn/>
         <Footer />
