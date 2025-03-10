@@ -24,6 +24,7 @@ const App = () => {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/pp/:id" element={<ServiceDetails />} />
         </Routes>
+        
         <WhatsappBtn/>
         <Footer />
       </BrowserRouter>
