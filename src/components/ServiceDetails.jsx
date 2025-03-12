@@ -169,7 +169,7 @@ const ServiceDetails = () => {
   if (!service) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <h2 className="text-2xl font-bold text-red-500">Page non trouvée</h2>
+        <h2 className="text-2xl font-bold ">Page non trouvée</h2>
       </div>
     );
   }
@@ -244,7 +244,7 @@ const ServiceDetails = () => {
         <div className="mt-8 flex justify-center">
           <Link
             to="/contact"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-blue-700 transition"
+            className="bg-purple-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-sm  transition"
           >
             Contactez-nous
           </Link>

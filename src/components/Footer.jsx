@@ -1,8 +1,12 @@
-
-import { FaFacebookF, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaTelegramPlane,
+  FaWhatsapp,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 const Footer = () => {
-
   const phoneNumber = "+237690481830";
   const message = "Salut...!";
   return (
@@ -25,7 +29,7 @@ const Footer = () => {
             </h2>
             <div className="flex justify-center md:justify-start space-x-4">
               <a
-                href=""
+                href="https://www.facebook.com/Frankam.Shopping"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-gray-800 hover:bg-blue-600 transition transform hover:scale-110"
@@ -33,26 +37,33 @@ const Footer = () => {
                 <FaFacebookF className="text-white text-lg" />
               </a>
               <a
-                href="https://www.facebook.com/Frankam.Shopping"
+                href="https://x.com/Frankam48"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-gray-800 hover:bg-blue-400 transition transform hover:scale-110"
               >
-                <FaWhatsapp className="text-white text-lg" />
+                <FaTwitter className="text-white text-lg" />
               </a>
-
               <a
-                href={``}
+                href="https://t.me/Frankam4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-gray-800 hover:bg-blue-700 transition transform hover:scale-110"
+                className="p-3 rounded-full bg-gray-800  transition transform hover:scale-110"
               >
-                <FaLinkedinIn className="text-white text-lg" />
+                <FaTelegramPlane className="text-white text-lg" />
               </a>
               <a
                 href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(
                   message
                 )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-gray-800 hover:bg-green-500 transition transform hover:scale-110"
+              >
+                <FaWhatsapp className="text-white text-lg" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/frank-kamgang/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-gray-800 hover:bg-blue-700 transition transform hover:scale-110"
@@ -62,16 +73,15 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
         <div className="mt-10 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
           &copy; 2025 Omiie - Tous droits réservés.
         </div>
-        <h4 className="text-center  mt-2">
+        <h4 className="text-center mt-2">
           <span translate="no">
             By{" "}
-            <strong className="text-slate-600 ">
+            <strong className="text-slate-600">
               <a
-                href={`mailto:frankamDev@gmail.com`}
+                href="mailto:frankamDev@gmail.com"
                 className="underline font-bold"
               >
                 FrankamDev@gmail.com
