@@ -77,7 +77,7 @@ const Services = () => {
               <div className="text-center">
                 <NavLink
                   to={`/pp/${service.id}`}
-                  className="bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700 transition"
+                  className="bg-purple-600 text-white py-2 px-6 rounded-md hover:bg-blue-700 transition"
                 >
                   Voir plus
                 </NavLink>

@@ -46,12 +46,12 @@ const Header = () => {
           scrolled ? "bg-white/80 shadow-md text-gray-900" : "bg-transparent text-purple-900"
         }`}
       >
-        <nav className="max-w-7xl bg-red-900 mx-auto px-6 py-4 flex justify-between items-center">
+        <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
          
           <NavLink to="/" className="text-2xl md:-ml-5 font-bold flex items-center">
             <img
-              src="/owl1.jpg"
-              className="w-14 h-14 rounded-full object-cover border  border-gray-300 shadow-ld"
+              src="/logo.jpg"
+              className="border-none h-14  object-cover border  border-gray-300 shadow-ld"
               alt="Logo du site"
             />
           </NavLink>
@@ -62,8 +62,8 @@ const Header = () => {
                 <NavLink
                   to={path}
                   className={({ isActive }) =>
-                    `relative transition hover:text-blue-500 ${
-                      isActive ? "border-b-2 border-blue-500" : ""
+                    `relative transition hover:text-purple-600 ${
+                      isActive ? "border-b-2 border-purple-600" : ""
                     }`
                   }
                 >
