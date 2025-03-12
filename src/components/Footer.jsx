@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
-  const phoneNumber = "+237690481830";
+  const phoneNumber = "690481830";
   const message = "Salut...!";
   return (
     <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
