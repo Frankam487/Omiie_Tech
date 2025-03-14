@@ -46,12 +46,12 @@ const Header = () => {
           scrolled ? "bg-white/80 shadow-md text-gray-900" : "bg-transparent text-purple-900"
         }`}
       >
-        <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <nav className=" mx-auto px-6 py-4 flex justify-between items-center">
          
-          <NavLink to="/" className="text-2xl md:-ml-5 font-bold flex items-center">
+          <NavLink to="/" className="text-2xl  md:-ml-1 font-bold flex items-center">
             <img
-              src="/logo.jpg"
-              className="border-none h-14  object-cover border  border-gray-300 shadow-ld"
+              src="/LINARESSE.png"
+              className="border-none bg object-cover"
               alt="Logo du site"
             />
           </NavLink>
@@ -73,7 +73,7 @@ const Header = () => {
             ))}
           </ul>
 
-          {/* Bouton Menu Mobile */}
+         
           <button
             className="md:hidden z-50 focus:outline-none"
             onClick={toggleMenu}

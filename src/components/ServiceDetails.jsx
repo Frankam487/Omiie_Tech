@@ -14,7 +14,7 @@ const servicesData = [
       "Applications web sur mesure",
       "Maintenance et support technique",
     ],
-    tools: ["React", "Next.js", "Tailwind CSS", "Node.js"],
+    tools: ["React", "Javascript", "Tailwind CSS", "Node.js"],
     benefits: [
       "Sites rapides et optimisés",
       "Expérience utilisateur fluide",
@@ -177,7 +177,7 @@ const ServiceDetails = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-6">
       <motion.div
-        className="max-w-5xl mx-auto bg-white p-10 rounded-lg shadow-xl"
+        className="max-w-5xl mx-auto bg-white p-10 pt-20 rounded-lg shadow-xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
