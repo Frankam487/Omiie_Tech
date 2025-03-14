@@ -46,12 +46,12 @@ const Header = () => {
           scrolled ? "bg-white/80 shadow-md text-gray-900" : "bg-transparent text-purple-900"
         }`}
       >
-        <nav className=" mx-auto px-6 py-4 flex justify-between items-center">
+        <nav className=" mx-auto px-6 flex justify-between items-center">
          
           <NavLink to="/" className="text-2xl  md:-ml-1 font-bold flex items-center">
             <img
               src="/LINARESSE.png"
-              className="border-none bg object-cover"
+              className="border-none h-20 object-cover"
               alt="Logo du site"
             />
           </NavLink>
